@@ -1,15 +1,20 @@
 class UsersController < ApplicationController
-  def index 
+  def index
     @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def new
     @user = User.new
   end
-  
+
   def create
+    # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
     @user = User.new(user_params)
-    
+
     if @user.save
       redirect_to root_path
     else
@@ -17,10 +22,24 @@ class UsersController < ApplicationController
     end
   end
 
-  private 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      # flash.notice = "User '#{@user.username}' edited!"
+      redirect_to root_path(@user)
+      # redirect_to root_path(@user)
+    else
+      render :edit
+    end
+  end
+
+  private
 
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
-  
 end

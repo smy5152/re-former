@@ -3,21 +3,27 @@
 # Project : Forms in Rails
 
 > The project aims to provide a deeper understanding on Forms in Rails. Associations are very simple and illustrated below:
-- User owns Posts & Comments
-- Post has to belong to a User & Post can have many Comments 
-- Comments must belong to a Post & a User
+- User 
 
-![reddit](schema-micro-reddit.PNG)
+![List](AllUsers.png)
+![Edit](Edit.png)
+![CRUD](Show_manage.png)
+![Schema](Schema.png)
 
 ## Built With
 
 - Ruby on Rails
-
+- Active Records
+- Forms & Helpers
 ## Getting Started
 
 Model generated:
 
 - user
+ - Create
+ - Edit
+ - Delete
+ - List
 
 ### Requirements
 - 1. Ruby (~v2.6.3 or more recent) installed in your machine.
