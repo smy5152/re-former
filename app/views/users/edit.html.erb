@@ -1,4 +1,25 @@
-<!-- <%= form_with model: @user, url: edit_user_path(@user), method: :patch do |form| %>
+<!-- <form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <br><br>
+  <label for="username" >Username:</label>
+  <input type="text" id="username" name="user[username]" ><br><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="user[email]"><br><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="user[password]"><br><br>
+  <input type="submit" value="Submit">
+</form> -->
+<!-- <%= form_tag("/users", method: "post") do %>
+  <br><br>
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field_tag(:username) %><br><br>
+  <%= label_tag(:password, "Password:") %>
+  <%= password_field_tag(:password) %><br><br>
+  <%= label_tag(:email, "Email:") %>
+  <%= text_field_tag(:email) %><br><br>
+
+  <%= submit_tag "Submit" %>
+<% end %><%= form_with model: @user, url: edit_user_path(@user), method: :patch do |form| %>
   <br><br>
   <%= form.label :username, "Edit Username:" %>
   <%= form.text_field :username, :value => @user.username %><br><br>

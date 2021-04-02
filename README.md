@@ -73,9 +73,6 @@ rails console
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/issues).
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
@@ -86,4 +83,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+This project is [MIT](LICENSE) licensed.
